@@ -1,0 +1,427 @@
+/* General: Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #333;
+}
+
+nav h1 {
+    color: white;
+    font-size: 24px;
+}
+
+#hero {
+    height: 100vh;
+    background: url('./img/queroCashh.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.092);
+}
+
+/* #hero h2 {
+    background: linear-gradient(50deg, #900303, #188302);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} */
+
+/* Nossa Equipe */
+#nossa-equipe {
+    padding: 20px;
+    background: none;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* Ajuste do tamanho das fotos dos agentes */
+.agente-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.agente {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.agente h4 {
+    margin-bottom: 10px;
+}
+
+.agente p {
+    margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5f;
+}
+
+/* Ofertas Exclusivas */
+#grupo-oferta {
+    padding: 20px;
+    background-color: #ffedcc;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px 0;
+}
+
+#grupo-oferta:hover {
+    transform: scale(1.05);
+}
+
+.instagram-btn {
+    display: inline-block;
+    background-color: #f77737;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.instagram-btn:hover {
+    background-color: #e6671d;
+}
+
+.oferta {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.oferta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.oferta p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Seção de Grupo de Ofertas no WhatsApp */
+#grupo-whatsapp {
+    padding: 40px;
+    background-color: #e0ffe0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#grupo-whatsapp h3 {
+    font-size: 28px;
+    color: #25d366;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#grupo-whatsapp p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo do GIF */
+.grupo-gif {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Botão para entrar no grupo de ofertas */
+
+
+.grupo-btn:hover {
+    background-color: #1ebe5f;
+    transform: scale(1.05);
+}
+
+
+/* Botão para entrar no grupo de ofertas */
+.grupo-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grupo-btn:hover {
+    background-color: #1ebe5f;
+    transform: scale(1.05);
+}
+
+
+/* Destinos */
+#destinos {
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    color: #00f;
+}
+
+/* Transition effects between sections */
+section {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajuste do tamanho das fotos dos destinos */
+.destino img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Estilo da imagem de promoção */
+.promo-img {
+    width: 300px;
+    /* Ajuste o tamanho desejado */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.oferta {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instagram-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    /* Verde WhatsApp */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Seção de Feedback */
+#feedback {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+#feedback h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#feedback p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilo da seção de Feedback */
+#feedback {
+    padding: 40px;
+    background-color: #ffebc9;
+    border-top: 2px solid #ff9900;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#feedback h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+#feedback p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.feedback-destaque {
+    font-style: italic;
+    color: #444;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-left: 5px solid #25d366;
+    background-color: #fff9e6;
+    border-radius: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+.feedback-destaque .aspas {
+    font-size: 36px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.feedback-destaque cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilo da seção de Feedback */
+#feedback {
+    padding: 40px;
+    background-color: #ffebc9;
+    border-top: 2px solid #ff9900;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#feedback h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+#feedback p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.feedback-destaque {
+    font-style: italic;
+    color: #444;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-left: 5px solid #25d366;
+    background-color: #fff9e6;
+    border-radius: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+.feedback-destaque .aspas {
+    font-size: 36px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.feedback-destaque cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilo do botão Ver Feedback */
+.feedback-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-btn:hover {
+    background-color: #1ebe5f;
+    transform: scale(1.05);
+}
+
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 10px auto;
+    max-width: 600px;
+    border-left: 4px solid #25D366;
+    padding-left: 15px;
+    text-align: left;
+}
