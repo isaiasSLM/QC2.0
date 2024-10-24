@@ -64,9 +64,11 @@ nav h1 {
     padding: 20px;
     background: none;
     color: black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 5px #0000007f;
+    box-shadow: 2px 4px 8px rgba(16, 16, 16, 0.974);
     border-radius: 8px;
     margin: 20px;
+    background-color: rgba(195, 190, 190, 0.681)
 }
 
 /* Ajuste do tamanho das fotos dos agentes */
