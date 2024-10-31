@@ -59,16 +59,150 @@ nav h1 {
     text-align: center;
 } */
 
+#promocoes-instagram {
+    padding: 20px;
+    background: linear-gradient(45deg, #000, #FFD700, #a70d0d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+    color: #fff;
+    border: 3px dashed #e60000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#promocoes-instagram h3 {
+    color: #e60000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1px;
+    /* Adiciona um espaço entre as letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra ao texto */
+}
+
+.promocoes-embed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CSS para empilhar itens em dispositivos móveis */
+@media (max-width: 768px) {
+    .promocoes-embed {
+        display: flex;
+        flex-direction: row;
+        /* Empilha os itens em vez de alinhá-los lado a lado */
+        align-items: center;
+        /* Centraliza os itens */
+        gap: 40px;
+        /* Aumenta o espaço entre os itens */
+        width: 100%;
+        /* Garante que a largura da seção seja 100% */
+        max-width: 600px;
+        /* Limita a largura máxima para manter um visual agradável */
+        margin: auto;
+        /* Centraliza a seção na tela */
+    }
+
+    .instagram-media {
+        max-width: 240px;
+        /* Reduz o tamanho máximo dos itens */
+        width: 100%;
+        /* Garante que os itens usem toda a largura disponível */
+        border: 2px solid #fff;
+        /* Altera a cor da borda para branco */
+        border-radius: 10px;
+        /* Aumenta o raio da borda */
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        /* Adiciona transição para a cor da borda */
+        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+        /* Sombra mais suave */
+    }
+
+    .instagram-media:hover {
+        transform: scale(1.1);
+        /* Aumenta um pouco mais no hover */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+        /* Sombra mais intensa ao passar o mouse */
+        border-color: #e60000;
+        /* Muda a cor da borda no hover */
+    }
+}
+
+
+.instagram-media {
+    max-width: 320px;
+    width: 100%;
+    border: 2px solid #e60000;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.follow-btn-container {
+    margin-top: 25px;
+}
+
+.follow-instagram-btn {
+    background-color: #e60000;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(230, 0, 0, 0.4);
+}
+
+.follow-instagram-btn:hover {
+    background-color: #ff3333;
+    transform: scale(1.05);
+}
+
+
+
+
 /* Nossa Equipe */
 #nossa-equipe {
     padding: 20px;
-    background: none;
+    background-color: rgba(195, 190, 190, 0.9);
+    /* Melhoria na opacidade */
     color: black;
-    text-shadow: 2px 2px 5px #0000007f;
-    box-shadow: 2px 4px 8px rgba(16, 16, 16, 0.974);
-    border-radius: 8px;
-    margin: 20px;
-    background-color: rgba(195, 190, 190, 0.681)
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Sombras mais sutis */
+    box-shadow: 2px 4px 10px rgba(16, 16, 16, 0.8);
+    /* Sombra mais pronunciada */
+    border-radius: 10px;
+    /* Cantos mais arredondados */
+    margin: 20px auto;
+    /* Centraliza com margens automáticas */
+    max-width: 2100px;
+    /* Largura máxima para melhor visualização em telas grandes */
+    transition: background-color 0.3s ease;
+    /* Transição suave para fundo */
 }
 
 /* Ajuste do tamanho das fotos dos agentes */
@@ -78,49 +212,171 @@ nav h1 {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    /* Transição ao passar o mouse */
+}
+
+.agente-foto:hover {
+    transform: scale(1.1);
+    /* Efeito de zoom ao passar o mouse */
 }
 
 .agente {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    /* Aumento do espaço entre os agentes */
     text-align: center;
 }
 
 .agente h4 {
     margin-bottom: 10px;
+    font-size: 1.5em;
+    /* Tamanho maior para o nome */
+    color: #333;
+    /* Cor mais escura para o nome */
 }
 
 .agente p {
     margin-bottom: 10px;
+    color: #000000;
+    /* Cor mais clara para a descrição */
+    font-size: 0.9em;
+    /* Tamanho reduzido para a descrição */
 }
 
 .whatsapp-btn {
     background-color: #25D366;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    /* Aumento do padding para botões maiores */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transições para cor e transformação */
 }
 
 .whatsapp-btn:hover {
     background-color: #1ebe5f;
+    transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
 }
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    #nossa-equipe {
+        padding: 15px;
+        /* Redução de padding em telas menores */
+    }
+
+    .agente-foto {
+        width: 120px;
+        /* Reduz o tamanho das fotos em dispositivos móveis */
+        height: 120px;
+    }
+
+    .agente h4 {
+        font-size: 1.3em;
+        /* Redução do tamanho da fonte */
+    }
+}
+
 
 /* Ofertas Exclusivas */
 #grupo-oferta {
     padding: 20px;
-    background-color: #ffedcc;
+    background-color: #ffe4b5;
+    /* Cor de fundo suave */
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    margin: 20px 0;
+    /* Sombra mais suave */
+    border-radius: 10px;
+    /* Cantos mais arredondados */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    /* Transições para escala e sombra */
+    margin: 50px 0;
+    max-width: 2100px;
+    /* Largura máxima para centralizar o conteúdo */
+    margin-left: auto;
+    /* Centraliza horizontalmente */
+    margin-right: auto;
+    /* Centraliza horizontalmente */
 }
 
+.promo-img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Efeito de hover */
 #grupo-oferta:hover {
     transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    /* Sombra mais pronunciada ao passar o mouse */
 }
+
+/* Títulos e texto */
+#grupo-oferta h3 {
+    font-size: 1.8em;
+    /* Tamanho maior para o título */
+    margin-bottom: 10px;
+    /* Espaçamento inferior */
+    color: #b5651d;
+    /* Cor do título */
+}
+
+#grupo-oferta p {
+    font-size: 1em;
+    /* Tamanho de fonte padrão */
+    color: #333;
+    /* Cor mais escura para o texto */
+    line-height: 1.5;
+    /* Espaçamento entre linhas */
+}
+
+/* Botão de ação */
+.oferta-btn {
+    background-color: #e64a19;
+    /* Cor do botão */
+    color: white;
+    padding: 12px 20px;
+    /* Aumenta o padding para um botão mais espaçoso */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transições para cor e transformação */
+    display: inline-block;
+    /* Para aplicar margin */
+    margin-top: 15px;
+    /* Espaçamento superior */
+}
+
+/* Efeito hover do botão */
+.oferta-btn:hover {
+    background-color: #d84315;
+    /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    #grupo-oferta {
+        padding: 15px;
+        /* Redução de padding em telas menores */
+    }
+
+    #grupo-oferta h3 {
+        font-size: 1.5em;
+        /* Redução do tamanho da fonte */
+    }
+}
+
 
 .instagram-btn {
     display: inline-block;
@@ -156,326 +412,373 @@ nav h1 {
 }
 
 /* Seção de Grupo de Ofertas no WhatsApp */
+/* Seção de Grupo de Ofertas no WhatsApp */
 #grupo-whatsapp {
     padding: 40px;
     background-color: #e0ffe0;
+    /* Cor de fundo suave */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra mais pronunciada */
+    border-radius: 12px;
+    /* Cantos mais arredondados */
     margin: 20px 0;
+    transition: transform 0.3s ease;
+    /* Transição suave ao passar o mouse */
+}
+
+#grupo-whatsapp:hover {
+    transform: translateY(-5px);
+    /* Efeito de leve elevação ao passar o mouse */
 }
 
 #grupo-whatsapp h3 {
-    font-size: 28px;
+    font-size: 2em;
+    /* Tamanho maior para o título */
     color: #25d366;
+    /* Cor do título */
     margin-bottom: 20px;
     font-weight: bold;
+    text-transform: uppercase;
+    /* Transformação para caixa alta */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil no texto */
 }
 
 #grupo-whatsapp p {
-    font-size: 18px;
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte do texto */
     color: #333;
+    /* Cor mais escura para o texto */
     margin-bottom: 30px;
+    line-height: 1.6;
+    /* Aumenta o espaçamento entre linhas */
 }
 
 /* Estilo do GIF */
 .grupo-gif {
     width: 100%;
     max-width: 500px;
+    /* Largura máxima para dispositivos */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    /* Cantos mais arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra mais suave */
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    /* Transição para animação */
 }
 
-/* Botão para entrar no grupo de ofertas */
-
-
-.grupo-btn:hover {
-    background-color: #1ebe5f;
+.grupo-gif:hover {
     transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
 }
-
 
 /* Botão para entrar no grupo de ofertas */
 .grupo-btn {
     display: inline-block;
     padding: 15px 30px;
     background-color: #25d366;
+    /* Cor do botão */
     color: white;
-    font-size: 18px;
+    font-size: 1.2em;
+    /* Tamanho de fonte maior para o botão */
     font-weight: bold;
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Transições para cor e transformação */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra mais pronunciada */
 }
 
+/* Efeito hover do botão */
 .grupo-btn:hover {
     background-color: #1ebe5f;
+    /* Cor mais escura ao passar o mouse */
     transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
 }
 
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    #grupo-whatsapp {
+        padding: 30px;
+        /* Reduz o padding em telas menores */
+    }
 
-/* Destinos */
+    #grupo-whatsapp h3 {
+        font-size: 1.5em;
+        /* Reduz o tamanho da fonte em dispositivos móveis */
+    }
+
+    #grupo-whatsapp p {
+        font-size: 1em;
+        /* Reduz o tamanho do texto em dispositivos móveis */
+    }
+}
+
+/* Estilos para a seção de destinos */
 #destinos {
     margin: 20px;
-}
-
-footer {
-    background-color: #333;
     padding: 20px;
-    text-align: center;
+    /* Adiciona um pouco de espaço interno */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fundo claro para destacar a seção */
+    border-radius: 10px;
+    /* Bordas arredondadas para suavizar o visual */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidade */
+}
+
+.destino {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    /* Flexbox para layout responsivo */
+    flex-wrap: wrap;
+    /* Permite que as imagens se ajustem em várias linhas */
+    justify-content: center;
+    /* Centraliza as imagens */
+    gap: 20px;
+    /* Espaçamento entre os itens */
 }
 
-footer p {
-    color: white;
-    font-size: 14px;
+/* Centraliza o conteúdo de cada destino */
+.destino div {
+    text-align: center;
+    /* Centraliza o texto e a imagem dentro de cada div */
 }
 
-footer a {
-    color: #00f;
-}
-
-/* Transition effects between sections */
-section {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-section.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Ajuste do tamanho das fotos dos destinos */
 .destino img {
     width: 300px;
+    /* Define uma largura fixa */
     height: 200px;
+    /* Define uma altura fixa para uniformidade */
     border-radius: 8px;
     object-fit: cover;
+    /* Cobre o espaço mantendo a proporção */
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    /* Transição suave para efeito de hover */
 }
 
-/* Estilo da imagem de promoção */
-.promo-img {
-    width: 300px;
-    /* Ajuste o tamanho desejado */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    display: block;
-    margin: 0 auto 10px;
+.destino img:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
 }
 
-.oferta {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.instagram-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #25D366;
-    /* Verde WhatsApp */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+/* Estilos para o título h4 */
+.destino h4 {
+    font-size: 1.5em;
+    /* Aumenta o tamanho da fonte */
     font-weight: bold;
+    /* Deixa o texto mais forte */
+    color: #11a92f;
+    /* Cor personalizada para o título */
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo do título */
 }
+
+/* Estilos para os parágrafos p */
+.destino p {
+    font-size: 20px;
+    /* Tamanho padrão da fonte */
+    color: #333;
+    /* Cor do texto */
+    line-height: 1.5;
+    /* Aumenta o espaçamento entre linhas */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 5px 0;
+    /* Adiciona um pouco de espaço acima e abaixo do texto */
+}
+
 
 /* Seção de Feedback */
-#feedback {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #e1e1e1;
-    text-align: center;
-}
-
-#feedback h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#feedback p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
 
 /* Estilo da seção de Feedback */
 #feedback {
     padding: 40px;
-    background-color: #ffebc9;
+    /* Espaçamento interno */
+    background-color: #fff9e6;
+    /* Fundo mais suave */
     border-top: 2px solid #ff9900;
+    /* Borda superior */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Centraliza o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    border-radius: 10px;
+    /* Bordas arredondadas */
 }
 
 #feedback h3 {
     font-size: 28px;
+    /* Tamanho do título */
     margin-bottom: 20px;
+    /* Espaço abaixo do título */
     color: #d9534f;
+    /* Cor do título */
     font-weight: bold;
+    /* Negrito */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
 }
 
 #feedback p {
     font-size: 18px;
+    /* Tamanho do parágrafo */
     margin-bottom: 30px;
-    color: #333;
+    /* Espaço abaixo do parágrafo */
+    color: #444;
+    /* Cor do texto */
+    line-height: 1.6;
+    /* Aumenta o espaçamento entre linhas */
 }
 
+/* Estilo para feedback em destaque */
 .feedback-destaque {
     font-style: italic;
-    color: #444;
+    /* Estilo itálico */
+    color: #333;
+    /* Cor do texto */
     margin: 20px auto;
+    /* Margens automáticas para centralizar */
     max-width: 800px;
+    /* Largura máxima */
     padding: 20px;
+    /* Espaçamento interno */
     border-left: 5px solid #25d366;
-    background-color: #fff9e6;
+    /* Borda lateral */
+    background-color: #ffffff;
+    /* Fundo branco */
     border-radius: 10px;
-    font-size: 18px;
+    /* Bordas arredondadas */
+    font-size: 20px;
+    /* Tamanho do texto */
     position: relative;
+    /* Para posicionar o conteúdo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
 }
 
 .feedback-destaque .aspas {
     font-size: 36px;
+    /* Tamanho das aspas */
     color: #d9534f;
+    /* Cor das aspas */
     font-weight: bold;
+    /* Negrito */
+    position: absolute;
+    /* Para posicionar as aspas */
+    left: -10px;
+    /* Alinhamento à esquerda */
+    top: -10px;
+    /* Alinhamento superior */
 }
 
 .feedback-destaque cite {
     display: block;
+    /* Bloco para citação */
     margin-top: 10px;
+    /* Espaço acima */
     font-size: 16px;
+    /* Tamanho da fonte da citação */
     color: #666;
-}
-
-/* Estilo da seção de Feedback */
-#feedback {
-    padding: 40px;
-    background-color: #ffebc9;
-    border-top: 2px solid #ff9900;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#feedback h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #d9534f;
-    font-weight: bold;
-}
-
-#feedback p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.feedback-destaque {
-    font-style: italic;
-    color: #444;
-    margin: 20px auto;
-    max-width: 800px;
-    padding: 20px;
-    border-left: 5px solid #25d366;
-    background-color: #fff9e6;
-    border-radius: 10px;
-    font-size: 18px;
-    position: relative;
-}
-
-.feedback-destaque .aspas {
-    font-size: 36px;
-    color: #d9534f;
-    font-weight: bold;
-}
-
-.feedback-destaque cite {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #666;
+    /* Cor da citação */
 }
 
 /* Estilo do botão Ver Feedback */
 .feedback-btn {
     display: inline-block;
+    /* Alinha como bloco inline */
     margin-top: 20px;
+    /* Espaço acima */
     padding: 15px 30px;
+    /* Espaçamento interno */
     background-color: #25d366;
+    /* Cor de fundo */
     color: white;
+    /* Cor do texto */
     font-size: 18px;
+    /* Tamanho do texto */
     font-weight: bold;
+    /* Negrito */
     text-decoration: none;
+    /* Remove sublinhado */
     border-radius: 8px;
+    /* Bordas arredondadas */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transição suave */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
 }
 
 .feedback-btn:hover {
     background-color: #1ebe5f;
+    /* Cor ao passar o mouse */
     transform: scale(1.05);
+    /* Efeito de zoom */
 }
 
 /* Ajuste do tamanho das imagens dos feedbacks */
 .feedback-item {
     text-align: center;
+    /* Centraliza texto e imagem */
     margin-bottom: 20px;
+    /* Espaço abaixo */
     position: relative;
-    /* Para posicionar a imagem no topo */
+    /* Para posicionamento */
 }
 
 .feedback-img {
     width: 120px;
+    /* Largura da imagem */
     height: 120px;
+    /* Altura da imagem */
     border-radius: 50%;
+    /* Forma circular */
     object-fit: cover;
+    /* Cobre o espaço mantendo proporção */
     margin-bottom: 10px;
+    /* Espaço abaixo */
     cursor: pointer;
-    /* Adiciona cursor de mão ao passar o mouse */
+    /* Cursor de mão ao passar */
+    transition: transform 0.3s ease;
+    /* Transição suave */
 }
 
-/* SEO: Imagem Alt Text */
-img {
-    alt: "Imagem relevante para SEO";
+.feedback-img:hover {
+    transform: scale(1.1);
+    /* Efeito de zoom na imagem */
 }
 
-/* Restante do CSS continua igual */
 
-/* Exemplo de estrutura adicional, como em "nossa equipe" */
-.agente-foto {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.promo-img {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    margin: 0 auto;
-    display: block;
-}
-
+/* Estilo dos botões de interação */
 .whatsapp-btn,
 .instagram-btn,
 .grupo-btn,
 .feedback-btn {
     display: inline-block;
-    padding: 10px 20px;
+    /* Mantém os botões alinhados */
+    padding: 12px 24px;
+    /* Aumenta o espaçamento interno */
     margin-top: 10px;
+    /* Espaço acima dos botões */
     text-decoration: none;
+    /* Remove o sublinhado */
     background-color: #25D366;
+    /* Cor de fundo padrão */
     color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    /* Cor do texto */
+    border-radius: 8px;
+    /* Bordas arredondadas para um visual mais suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    font-size: 16px;
+    /* Tamanho da fonte para melhor legibilidade */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transições suaves */
 }
 
 .whatsapp-btn:hover,
@@ -483,45 +786,28 @@ img {
 .grupo-btn:hover,
 .feedback-btn:hover {
     background-color: #128C7E;
+    /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px);
+    /* Efeito de movimento ao passar o mouse */
 }
 
+/* Estilo do GIF do grupo do WhatsApp */
 #grupo-whatsapp .grupo-gif {
     width: 100%;
+    /* Largura total */
     max-width: 300px;
+    /* Largura máxima */
     margin: 20px auto;
+    /* Margens automáticas para centralizar */
     display: block;
+    /* Exibe como bloco */
+    border-radius: 10px;
+    /* Bordas arredondadas para suavizar o visual */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
 }
 
-/* Feedback blockquote styling */
-.feedback-destaque {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #333;
-    position: relative;
-}
 
-.feedback-destaque .aspas {
-    font-size: 2em;
-    color: #ccc;
-    position: absolute;
-}
-
-.feedback-destaque cite {
-    display: block;
-    text-align: right;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-blockquote {
-    font-style: italic;
-    color: #555;
-    margin: 10px auto;
-    max-width: 600px;
-    border-left: 4px solid #25D366;
-    padding-left: 15px;
-    text-align: left;
-}
 
 /* Adiciona estilo para o modal */
 .modal {
@@ -542,35 +828,336 @@ blockquote {
     /* Opacidade inicial */
 }
 
+/* Estilos para o modal */
+.modal {
+    display: none;
+    /* Oculta o modal inicialmente */
+    position: fixed;
+    /* Fixa o modal na tela */
+    z-index: 1000;
+    /* Mantém o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo escurecido com mais opacidade */
+    transition: opacity 0.3s ease-in-out;
+    /* Transição para a opacidade */
+    opacity: 0;
+    /* Opacidade inicial */
+    backdrop-filter: blur(5px);
+    /* Adiciona desfoque ao fundo */
+}
+
+/* Estilo da imagem no modal */
 .modal-img {
     display: block;
     /* Imagem como bloco para centralizar */
-    margin: 10% auto;
-    max-width: 80%;
+    margin: 5% auto;
+    /* Margem superior e inferior para centralização */
+    max-width: 90%;
     /* Largura máxima da imagem */
     max-height: 80%;
     /* Altura máxima da imagem */
+    border-radius: 10px;
+    /* Bordas arredondadas para a imagem */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Sombra leve ao redor da imagem */
 }
 
+/* Estilo do botão de fechar */
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    /* Posiciona o botão no canto superior direito */
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    /* Aumenta o tamanho do ícone */
     cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
     color: white;
+    /* Cor do ícone */
+    transition: color 0.3s ease;
+    /* Transição suave para a cor */
 }
 
 .close-modal:hover,
 .close-modal:focus {
-    color: #ddd;
+    color: #ffcccc;
+    /* Cor ao passar o mouse */
 }
 
-/* Estilo para o rodapé */
+/* Adiciona uma animação ao abrir o modal */
+.modal.show {
+    display: block;
+    /* Exibe o modal */
+    opacity: 1;
+    /* Opacidade total */
+    transition: opacity 0.3s ease-in-out;
+    /* Transição de opacidade */
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    /* Oculta o modal inicialmente */
+    position: fixed;
+    /* Fixa o modal na tela */
+    z-index: 1000;
+    /* Mantém o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo escurecido com mais opacidade */
+    transition: opacity 0.3s ease-in-out;
+    /* Transição para a opacidade */
+    opacity: 0;
+    /* Opacidade inicial */
+    backdrop-filter: blur(5px);
+    /* Adiciona desfoque ao fundo */
+}
+
+/* Estilo da imagem no modal */
+.modal-img {
+    display: block;
+    /* Imagem como bloco para centralizar */
+    margin: 5% auto;
+    /* Margem superior e inferior para centralização */
+    max-width: 90%;
+    /* Largura máxima da imagem */
+    max-height: 80%;
+    /* Altura máxima da imagem */
+    border-radius: 10px;
+    /* Bordas arredondadas para a imagem */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Sombra leve ao redor da imagem */
+}
+
+/* Estilo do botão de fechar */
+.close-modal {
+    position: absolute;
+    /* Posiciona o botão no canto superior direito */
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    /* Aumenta o tamanho do ícone */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    color: white;
+    /* Cor do ícone */
+    transition: color 0.3s ease;
+    /* Transição suave para a cor */
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #ffcccc;
+    /* Cor ao passar o mouse */
+}
+
+/* Adiciona uma animação ao abrir o modal */
+.modal.show {
+    display: block;
+    /* Exibe o modal */
+    opacity: 1;
+    /* Opacidade total */
+    transition: opacity 0.3s ease-in-out;
+    /* Transição de opacidade */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    /* Cor de fundo escura */
+    padding: 20px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+    display: flex;
+    /* Utiliza Flexbox para layout */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 10px;
+    /* Espaçamento entre os itens */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    /* Adiciona sombra ao rodapé */
+}
+
+footer p {
+    color: #fff;
+    /* Cor do texto do parágrafo */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    margin: 0;
+    /* Remove margem padrão */
+    line-height: 1.5;
+    /* Aumenta a altura da linha para melhor legibilidade */
+}
+
+footer a {
+    color: #1E90FF;
+    /* Cor azul mais suave para links */
+    text-decoration: none;
+    /* Remove sublinhado padrão */
+    transition: color 0.3s ease;
+    /* Transição suave para a cor */
+}
+
+footer a:hover {
+    color: #00BFFF;
+    /* Cor ao passar o mouse */
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Transições entre seções */
+section {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Transições suaves */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateY(50px);
+    /* Deslocamento para baixo */
+}
+
+section.active {
+    opacity: 1;
+    /* Visível quando ativo */
+    transform: translateY(0);
+    /* Retorna à posição original */
+}
+
+/* Estilo para o conteúdo do rodapé */
 .footer-content {
     display: flex;
+    /* Utiliza Flexbox para layout */
     flex-direction: column;
+    /* Organiza os itens em coluna */
     align-items: center;
+    /* Centraliza os itens horizontalmente */
     gap: 10px;
+    /* Espaçamento entre os itens */
     color: #fff;
+    /* Cor do texto */
+    max-width: 800px;
+    /* Largura máxima para melhor legibilidade */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+    padding: 10px;
+    /* Espaçamento interno */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #222;
+    /* Cor de fundo um pouco mais escura para um contraste melhor */
+    padding: 30px;
+    /* Aumenta o espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+    display: flex;
+    /* Utiliza Flexbox para layout */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 15px;
+    /* Aumenta o espaçamento entre os itens */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra mais pronunciada */
+    border-top: 2px solid #1E90FF;
+    /* Borda superior colorida para destaque */
+}
+
+/* Estilo dos parágrafos */
+footer p {
+    color: #f0f0f0;
+    /* Cor de texto mais suave para melhor legibilidade */
+    font-size: 15px;
+    /* Aumenta o tamanho da fonte */
+    margin: 0;
+    /* Remove margem padrão */
+    line-height: 1.6;
+    /* Aumenta a altura da linha para melhor legibilidade */
+}
+
+/* Estilo dos links */
+footer a {
+    color: #1E90FF;
+    /* Cor azul para links */
+    text-decoration: none;
+    /* Remove sublinhado padrão */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transição suave para a cor e transformação */
+}
+
+footer a:hover {
+    color: #00BFFF;
+    /* Cor ao passar o mouse */
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve aumento ao passar o mouse */
+}
+
+/* Transições entre seções */
+section {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Transições suaves */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateY(50px);
+    /* Deslocamento para baixo */
+}
+
+section.active {
+    opacity: 1;
+    /* Visível quando ativo */
+    transform: translateY(0);
+    /* Retorna à posição original */
+}
+
+/* Estilo para o conteúdo do rodapé */
+.footer-content {
+    display: flex;
+    /* Utiliza Flexbox para layout */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 15px;
+    /* Aumenta o espaçamento entre os itens */
+    color: #f0f0f0;
+    /* Cor do texto */
+    max-width: 800px;
+    /* Largura máxima para melhor legibilidade */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+    padding: 15px;
+    /* Aumenta o espaçamento interno */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    footer {
+        padding: 20px;
+        /* Ajusta o espaçamento em telas menores */
+    }
+
+    footer p {
+        font-size: 14px;
+        /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    footer a {
+        font-size: 14px;
+        /* Tamanho do link em telas menores */
+    }
 }

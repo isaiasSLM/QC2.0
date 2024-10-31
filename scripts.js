@@ -56,3 +56,6 @@ feedbackImages.forEach(image => {
         }, 10);
     });
 });
+
+
+
