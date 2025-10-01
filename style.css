@@ -765,7 +765,9 @@ a.btn-secundario {
     height: 160px
   }
 
-  .diferencial {
+
+
+  .diferenciais {
     display: flex;
     flex-direction: column;
   }
