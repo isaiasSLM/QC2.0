@@ -87,6 +87,7 @@ body {
 }
 
 .hero-texto {
+  max-width: 100%;
   flex: 1;
   color: var(--branco);
   padding: 40px 0
@@ -604,6 +605,7 @@ a.btn-secundario {
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 15px;
   /* Espaço entre ícones */
 }
