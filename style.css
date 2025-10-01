@@ -769,6 +769,15 @@ a.btn-secundario {
 
   .diferenciais {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .diferencial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
