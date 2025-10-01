@@ -448,7 +448,7 @@ a.btn-secundario {
 .diferencial {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 6px;
   background: #fff;
   padding: 20px;
